@@ -9,15 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @class GVGoogleBannerView;
-
 @protocol GVGoogleBannerViewDelegate <NSObject>
 
 @required
 - (NSString *)googleBannerViewAdUnitID;
 
 @optional
-- (void)googleBannerViewOpened:(GoogleBannerView *)googleBannerView;
-- (void)googleBannerViewClosed:(GoogleBannerView *)googleBannerView;
+- (void)googleBannerViewOpened:(GVGoogleBannerView *)googleBannerView;
+- (void)googleBannerViewClosed:(GVGoogleBannerView *)googleBannerView;
 - (BOOL)googleBannerViewEnabled;
 - (BOOL)googleBannerViewHasCloseAdButton;
 - (UIButton *)googleBannerViewCloseAdButton;
@@ -26,7 +25,7 @@
 @end
 
 
-@interface GoogleBannerView : DFPBannerView
+@interface GVGoogleBannerView : DFPBannerView
 
 @property (weak, nonatomic) IBOutlet UIViewController <GVGoogleBannerViewDelegate> *googleBannerViewDelegate;
 
