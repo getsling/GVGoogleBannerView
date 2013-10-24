@@ -6,7 +6,7 @@
 //
 
 #import <Google-AdMob-Ads-SDK/DFPExtras.h>
-#import "GoogleBannerView.h"
+#import "GVGoogleBannerView.h"
 
 
 @interface GVGoogleBannerView () <GADBannerViewDelegate>
