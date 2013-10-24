@@ -98,9 +98,9 @@
                 extras.additionalParameters = targetDict;
                 [request registerAdNetworkExtras:extras];
             }
-            DLog(@"Requesting banner with ad unit id %@ for size %@ and targeting %@", self.adUnitID, NSStringFromCGSize(self.bounds.size), targetDict);
+            NSLog(@"Requesting banner with ad unit id %@ for size %@ and targeting %@", self.adUnitID, NSStringFromCGSize(self.bounds.size), targetDict);
         } else {
-            DLog(@"Requesting banner with ad unit id %@ for size %@", self.adUnitID, NSStringFromCGSize(self.bounds.size));
+            NSLog(@"Requesting banner with ad unit id %@ for size %@", self.adUnitID, NSStringFromCGSize(self.bounds.size));
         }
 
         [self loadRequest:request];
