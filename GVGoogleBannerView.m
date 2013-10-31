@@ -40,6 +40,7 @@
     if (!_closeButton) {
         if ([self.googleBannerViewDelegate respondsToSelector:@selector(googleBannerViewCloseAdButton)]) {
             _closeButton = [self.googleBannerViewDelegate googleBannerViewCloseAdButton];
+            [_closeButton addTarget:self action:@selector(closeAd) forControlEvents:UIControlEventTouchUpInside];
         } else {
             // Default close button
             self.clipsToBounds = NO;
@@ -123,20 +124,20 @@
 #pragma mark - GADBannerViewDelegate
 
 - (void)adViewDidReceiveAd:(GADBannerView *)view {
+    if ([self hasCloseAdButton]) {
+        if (!self.closeButton.superview) {
+            [self addSubview:self.closeButton];
+        }
+
+        self.closeButton.hidden = NO;
+        [self bringSubviewToFront:self.closeButton];
+    } else {
+        self.closeButton.hidden = YES;
+        [self sendSubviewToBack:self.closeButton];
+    }
+
     if (self.hidden) {
         self.hidden = NO;
-
-        if ([self hasCloseAdButton]) {
-            if (!self.closeButton.superview) {
-                [self addSubview:self.closeButton];
-            }
-
-            self.closeButton.hidden = NO;
-            [self bringSubviewToFront:self.closeButton];
-        } else {
-            self.closeButton.hidden = YES;
-            [self sendSubviewToBack:self.closeButton];
-        }
 
         if ([self.googleBannerViewDelegate respondsToSelector:@selector(googleBannerViewOpened:)]) {
             [self.googleBannerViewDelegate googleBannerViewOpened:self];
