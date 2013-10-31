@@ -39,8 +39,8 @@ Your view controller must then implement the only required delegate method:
 GVGoogleBannerView also (optionally) adds a close button to the banner, makes it a lot easier to provide extra targeting parameters and has easy delegate callbacks for when banners are opened or closed. You can for example add a content inset to your tableview, scrollview or collectionview:
 
 ```objective-c
-- (void)googleBannerViewOpened:(GVGoogleBannerView *)banner {
-    UIEdgeInsets *insets = UIEdgeInsetsMake(0, 0, banner.frame.size.height, 0);
+- (void)googleBannerViewOpened:(GVGoogleBannerView *) googleBannerView {
+    UIEdgeInsets *insets = UIEdgeInsetsMake(0, 0, googleBannerView.frame.size.height, 0);
     self.collectionView.contentInset = insets;
     self.collectionView.scrollIndicatorInsets = insets;
 }
