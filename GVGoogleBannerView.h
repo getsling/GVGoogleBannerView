@@ -5,7 +5,7 @@
 //  Copyright (c) 2013 Gangverk. All rights reserved.
 //
 
-#import <Google-AdMob-Ads-SDK/DFPBannerView.h>
+#import <Google-Mobile-Ads-SDK/DFPBannerView.h>
 #import <UIKit/UIKit.h>
 
 @class GVGoogleBannerView;

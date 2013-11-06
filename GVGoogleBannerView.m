@@ -5,7 +5,7 @@
 //  Copyright (c) 2013 Gangverk. All rights reserved.
 //
 
-#import <Google-AdMob-Ads-SDK/DFPExtras.h>
+#import <Google-Mobile-Ads-SDK/DFPExtras.h>
 #import "GVGoogleBannerView.h"
 
 
