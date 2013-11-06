@@ -1,9 +1,9 @@
 GVGoogleBannerView
 ==================
 
-Google-AdMob-Ads-SDK banners in interface builder with handy delegate callbacks.
+Google-Mobile-Ads-SDK banners in interface builder with handy delegate callbacks.
 
-Normally requesting a banner from Google's AdMob Ads SDK involves code like this:
+Normally requesting a banner from Google's Mobile Ads SDK involves code like this:
 
 ```objective-c
 - (void)viewDidLoad {

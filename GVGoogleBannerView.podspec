@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "GVGoogleBannerView"
-  s.version      = "1.0.1"
-  s.summary      = "Google-AdMob-Ads-SDK banners in interface builder with handy delegate callbacks."
+  s.version      = "1.0.2"
+  s.summary      = "Google-Mobile-Ads-SDK banners in interface builder with handy delegate callbacks."
   s.homepage     = "https://github.com/gangverk/GVGoogleBannerView"
   s.license      = 'MIT'
   s.author       = { "Kevin Renskers" => "info@mixedcase.nl" }
@@ -10,5 +10,5 @@ Pod::Spec.new do |s|
   s.resources    = "*.png"
   s.platform     = :ios, '5.0'
   s.requires_arc = true
-  s.dependency "Google-AdMob-Ads-SDK"
+  s.dependency "Google-Mobile-Ads-SDK"
 end
