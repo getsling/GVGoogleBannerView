@@ -1,5 +1,7 @@
-GVGoogleBannerView
-==================
+# GVGoogleBannerView
+
+[![Badge w/ Version](https://cocoapod-badges.herokuapp.com/v/GVGoogleBannerView/badge.png)](http://cocoadocs.org/docsets/GVGoogleBannerView)
+[![Badge w/ Platform](https://cocoapod-badges.herokuapp.com/p/GVGoogleBannerView/badge.svg)](http://cocoadocs.org/docsets/GVGoogleBannerView)
 
 Google-Mobile-Ads-SDK banners in interface builder with handy delegate callbacks.
 
