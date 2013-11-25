@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "GVGoogleBannerView"
-  s.version      = "1.0.2"
+  s.version      = "1.1.0"
   s.summary      = "Google-Mobile-Ads-SDK banners in interface builder with handy delegate callbacks."
   s.homepage     = "https://github.com/gangverk/GVGoogleBannerView"
   s.license      = 'MIT'

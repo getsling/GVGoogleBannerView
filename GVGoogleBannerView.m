@@ -91,6 +91,16 @@
         GADRequest *request = [GADRequest request];
         request.testDevices = @[GAD_SIMULATOR_ID];
 
+        // Extra test devices?
+        if ([self.googleBannerViewDelegate respondsToSelector:@selector(googleBannerTestDevices)]) {
+            NSArray *extraTestDevices = [self.googleBannerViewDelegate googleBannerTestDevices];
+            if (extraTestDevices && [extraTestDevices count]) {
+                NSMutableArray *extraTestDevicesMutable = [extraTestDevices mutableCopy];
+                [extraTestDevicesMutable addObject:GAD_SIMULATOR_ID];
+                request.testDevices = extraTestDevicesMutable;
+            }
+        }
+
         // Send extra targeting params
         if ([self.googleBannerViewDelegate respondsToSelector:@selector(googleBannerTargeting)]) {
             NSDictionary *targetDict = [self.googleBannerViewDelegate googleBannerTargeting];
