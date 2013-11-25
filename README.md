@@ -42,7 +42,7 @@ GVGoogleBannerView also (optionally) adds a close button to the banner, makes it
 
 ```objective-c
 - (void)googleBannerViewOpened:(GVGoogleBannerView *) googleBannerView {
-    UIEdgeInsets *insets = UIEdgeInsetsMake(0, 0, googleBannerView.frame.size.height, 0);
+    UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, googleBannerView.frame.size.height, 0);
     self.collectionView.contentInset = insets;
     self.collectionView.scrollIndicatorInsets = insets;
 }
