@@ -32,6 +32,10 @@
     return self;
 }
 
+- (void)dealloc {
+    self.delegate = nil;
+}
+
 - (void)sharedInit {
     self.hidden = YES;
 }
