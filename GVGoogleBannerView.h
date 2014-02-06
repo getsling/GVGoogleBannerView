@@ -17,6 +17,8 @@
 @optional
 - (void)googleBannerViewOpened:(GVGoogleBannerView *)googleBannerView;
 - (void)googleBannerViewClosed:(GVGoogleBannerView *)googleBannerView;
+- (void)googleBannerViewReceivedAd:(GVGoogleBannerView *)googleBannerView;
+- (void)googleBannerViewFailedToReceiveAd:(GVGoogleBannerView *)googleBannerView;
 - (BOOL)googleBannerViewEnabled;
 - (BOOL)googleBannerViewHasCloseAdButton;
 - (UIButton *)googleBannerViewCloseAdButton;
