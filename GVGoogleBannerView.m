@@ -138,6 +138,10 @@
 #pragma mark - GADBannerViewDelegate
 
 - (void)adViewDidReceiveAd:(GADBannerView *)view {
+    if ([self.googleBannerViewDelegate respondsToSelector:@selector(googleBannerViewReceivedAd:)]) {
+        [self.googleBannerViewDelegate googleBannerViewReceivedAd:self];
+    }
+
     if ([self hasCloseAdButton]) {
         if (!self.closeButton.superview) {
             [self addSubview:self.closeButton];
@@ -161,6 +165,10 @@
 
 - (void)adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error {
     NSLog(@"didFailToReceiveAdWithError: %@", error);
+    if ([self.googleBannerViewDelegate respondsToSelector:@selector(googleBannerViewFailedToReceiveAd:)]) {
+        [self.googleBannerViewDelegate googleBannerViewFailedToReceiveAd:self];
+    }
+
     [self closeAd];
 }
 
