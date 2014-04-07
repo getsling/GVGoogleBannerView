@@ -105,6 +105,17 @@
             }
         }
 
+        // Location targeting
+        if ([self.googleBannerViewDelegate respondsToSelector:@selector(googleBannerLocation)]) {
+            NSDictionary *location = [self.googleBannerViewDelegate googleBannerLocation];
+            if (location) {
+                CGFloat latitude = [[location objectForKey:@"latitude"] doubleValue];
+                CGFloat longitude = [[location objectForKey:@"longitude"] doubleValue];
+                CGFloat accuracy = [[location objectForKey:@"accuracy"] doubleValue];
+                [request setLocationWithLatitude:latitude longitude:longitude accuracy:accuracy];
+            }
+        }
+
         // Send extra targeting params
         if ([self.googleBannerViewDelegate respondsToSelector:@selector(googleBannerTargeting)]) {
             NSDictionary *targetDict = [self.googleBannerViewDelegate googleBannerTargeting];
