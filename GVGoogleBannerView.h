@@ -22,6 +22,7 @@
 - (BOOL)googleBannerViewEnabled;
 - (BOOL)googleBannerViewHasCloseAdButton;
 - (UIButton *)googleBannerViewCloseAdButton;
+- (NSString *)googleBannerContentURL;
 - (NSDictionary *)googleBannerTargeting;
 - (NSArray *)googleBannerTestDevices;
 

@@ -101,6 +101,11 @@
             }
         }
 
+        // Send contentURL property
+        if ([self.googleBannerViewDelegate respondsToSelector:@selector(googleBannerContentURL)]) {
+            request.contentURL = self.googleBannerViewDelegate.googleBannerContentURL;
+        }
+
         // Send extra targeting params
         if ([self.googleBannerViewDelegate respondsToSelector:@selector(googleBannerTargeting)]) {
             NSDictionary *targetDict = [self.googleBannerViewDelegate googleBannerTargeting];
